@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <%- include('partials/header.ejs') %>
+    <body>
+        <%- include('partials/figure.ejs') %>
+        <h1>Characters</h1> 
+
+        <%- include('partials/nav.ejs') %>
+        <h2>Learn about some characters and what films they are in!</h2>
+
+        <div class="characters">
+            <% characters.forEach(char => { %>
+                <div class="character-card">
+                    <h2><%= char.name %></h2>
+                    <img src="<%= char.imageUrl %>" alt="<%= char.name %>" width="150" />
+                    <p>Films: <%= char.films.join(", ") %></p>
+                </div>
+            <% }) %>
+          </div>
+        <%- include('partials/footer.ejs') %>
+
+    </body
+</html>

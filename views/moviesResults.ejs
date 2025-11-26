@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <%- include('partials/header.ejs') %>
+    <body>
+        <%- include('partials/figure.ejs') %>
+        <h1>Results for "<%= movieTitle %>"</h1>
+        <%- include('partials/nav.ejs') %>
+
+        <h3>Look up your favorite Movies / TV show characters!</h3>
+        
+        <h2>Characters:</h2>
+        <div class="char">
+            <% characters.forEach(char => { %>
+                <div class="char-card">
+                    <h2><%= char.name %></h2>
+                    <% if(char.imageUrl){ %>
+                        <img src="<%= char.imageUrl %>">
+                    <% } %>
+                </div>
+            <% }) %>
+        </div>
+
+        <%- include('partials/footer.ejs') %>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <%- include('partials/header.ejs') %>
+    <body>
+        <%- include('partials/figure.ejs') %>
+        <h2>Allies & Enemies</h2>  
+        <%- include('partials/nav.ejs') %>
+        <% if (!characterData) { %>
+            <p>No character found with allies or enemies. Try reloading.</p>
+        <% } else { %>
+        
+        <h2><%= characterData.name %></h2>
+
+        <% if (characterData.imageUrl) { %>
+            <img src="<%= characterData.imageUrl %>" width="300">
+        <% } %>
+
+            <h3>Allies</h3>
+            <% if (characterData.allies.length > 0) { %>
+                <ul>
+                    <% characterData.allies.forEach(a => { %>
+                        <li><%= a %></li>
+                    <% }) %>
+                </ul>
+            <% } else { %>
+            <p>No allies listed.</p>
+            <% } %>
+
+            <h3>Enemies</h3>
+            <% if (characterData.enemies.length > 0) { %>
+                <ul>
+                    <% characterData.enemies.forEach(e => { %>
+                        <li><%= e %></li>
+                    <% }) %>
+                </ul>
+            <% } else { %>
+                <p>No enemies listed.</p>
+            <% } %>
+
+        <% } %>
+
+        <button onclick="location.reload()">Show Another Character</button>
+
+        <%- include('partials/footer.ejs') %>
+    </body>
+</html>
