@@ -1,24 +1,8 @@
-body {
+body{
     font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 20px;
-    color: black;
-    font-size: 18px;
-    font-style: oblique;
-}
-
-.text-box {
-    background-color: #b54efe91;
-    color: black;
-    padding: 20px;
-    margin-bottom: 10px;
-    display: inline-block;
-
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    font-size: 20px;
-    border: 1px solid #ccc;
+    text-align: center ;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
 }
 
 #back {
@@ -27,13 +11,111 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     z-index: -1;
     margin: 0;
     padding: 0;
 }
 
-#back img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+#disneylogo img{
+    width: 900px;
+    display: block;
+    margin: 0 auto;
+}
+
+#disneylogo{
+    margin-top: 20px;
+}
+
+nav a{
+    padding:15px;
+    padding-bottom:4px;
+    font-size: 1.8em;
+    text-decoration: none; /* removes underline */
+    color: rgb(20, 138, 63);        /* by default, links are blue */ 
+}
+
+nav a:hover{
+    border-bottom: 2px rgb(0, 0, 0) solid;
+    font-size: 2em;
+}
+
+nav a.active {
+    color: rgb(0, 52, 54);
+    font-weight: bold;
+    border-bottom: 2px rgb(0, 0, 0) solid;
+}
+
+.char {
+    display: flex;
+    flex-wrap: wrap;       /* allows cards to wrap to next line */
+    gap: 20px;             /* space between cards */
+    justify-content: center; /* center all cards */
+    margin-top: 20px;
+}
+
+.char-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;           /* fixed card width */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.char-card img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+.char-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+
+.fun{
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #5fdfff, #1fe7bb);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+button{
+    background-color: #007bff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: 0.3s
+}
+
+.characters {
+    display: flex;           
+    flex-wrap: wrap;         
+    gap: 20px;               
+    justify-content: center; 
+}
+
+.character-card {
+    border: 1px solid #ccc;  
+    padding: 10px;
+    width: 200px;             
+    text-align: center;
+    border-radius: 8px;       
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1); 
+    background-color: #f9f9f9;
+    transition: transform 0.2s; 
+}
+
+.character-card:hover {
+    transform: scale(1.05);  
 }
